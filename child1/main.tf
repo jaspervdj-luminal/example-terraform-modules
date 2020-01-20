@@ -1,3 +1,7 @@
+output "grandchild_vpc" {
+  value = module.grandchild1.grandchild_vpc
+}
+
 module "grandchild1" {
   source = "./grandchild1"
 }
