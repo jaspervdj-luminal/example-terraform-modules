@@ -2,6 +2,10 @@ provider "aws" {
   region = "us-east-2"
 }
 
+output "parent_vpc" {
+  value = aws_vpc.parent.id
+}
+
 module "child1" {
   source = "./child1"
 }
